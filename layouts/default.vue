@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <h1>Интернет-магазин</h1>
     <Nuxt />
   </div>
