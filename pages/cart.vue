@@ -1,12 +1,12 @@
 <template>
-  <catalog />
+  <cart />
 </template>
 
 <script>
-import Catalog from '@/components/Catalog.vue'
+import Cart from '@/components/Cart'
 export default {
   components: {
-    Catalog
+    Cart
   }
 }
 </script>
