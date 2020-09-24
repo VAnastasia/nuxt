@@ -1,10 +1,10 @@
 <template>
   <div class="cart">
-    <router-link :to="{name: 'index'}">
+    <nuxt-link :to="{name: 'index'}">
       <div class="cart__back">
         Вернуться в каталог
       </div>
-    </router-link>
+    </nuxt-link>
     <h2>Корзина</h2>
     <p v-if="!cartData.length">
       В корзине пусто

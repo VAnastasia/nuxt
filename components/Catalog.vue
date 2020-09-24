@@ -1,12 +1,12 @@
 <template>
   <div>
-    <router-link :to="{name: 'cart'}">
+    <nuxt-link :to="{name: 'cart'}">
       <div class="catalog__cart-count">
         <p><span>{{ CART.length }}</span></p>
       </div>
-    </router-link>
+    </nuxt-link>
     <div class="search">
-      <input v-model="searchValue" type="text" class="search__input">
+      <input v-model="searchValue" type="text" class="search__input" @input="onSearch">
       <button title="Поиск" class="search__button" @click="onSearch" />
     </div>
     <div class="catalog__filters">
@@ -104,15 +104,15 @@ export default {
       this.selectedSort = sortType.name
     },
     onSearch () {
+      this.selected = 'Все'
+      this.selectedSort = 'По возрастанию'
       this.filtredProducts = this.PRODUCTS.filter((item) => {
         const searchQuery = this.searchValue.toLowerCase()
         const name = item.name.toLowerCase()
         const color = item.color.toLowerCase()
         const category = item.category.toLowerCase()
 
-        return name.includes(searchQuery) ||
-        color.includes(searchQuery) ||
-        category.includes(searchQuery)
+        return name.includes(searchQuery) || color.includes(searchQuery) || category.includes(searchQuery)
       })
     }
   }

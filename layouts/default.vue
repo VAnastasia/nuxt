@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <h1>Интернет-магазин</h1>
-    <Nuxt />
+    <Nuxt keep-alive />
   </div>
 </template>
 

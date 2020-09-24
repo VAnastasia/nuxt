@@ -8,7 +8,7 @@
       <p class="catalog-item__price">
         {{ parseInt(item.price).toLocaleString('de-DE') }} &#8381;
       </p>
-      <button class="btn" @click="addToCart">
+      <button class="btn" title="Добавить в корзину" @click="addToCart">
         +
       </button>
     </div>
